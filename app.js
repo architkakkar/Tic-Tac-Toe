@@ -25,6 +25,7 @@ boxes.forEach((box) => {
         if (box.innerHTML === "" && !isWinner) {
             // X turn
             if (turnX) {
+                box.style.color = "#b0413e";
                 box.innerHTML = "X";
                 turnX = false;
             }
@@ -47,6 +48,7 @@ resetBtn.addEventListener("click", () => {
     message.innerHTML = "";
     turnX = true;
     isWinner = false;
+    count = 0;
 });
 
 // New game (reloads the page)
